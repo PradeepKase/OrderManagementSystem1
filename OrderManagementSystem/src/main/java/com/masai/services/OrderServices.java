@@ -1,8 +1,15 @@
 package com.masai.services;
 
+import java.util.List;
+
+import javax.persistence.criteria.Order;
+
+import com.masai.exception.OrderNotFound;
 import com.masai.model.Orders;
 
 public interface OrderServices {
 
-	public Orders addOrder(Orders order, Integer cid);
+	public String addOrder(Orders order, Integer cid)throws OrderNotFound;
+	
+	public List<Orders> allorders();
 }

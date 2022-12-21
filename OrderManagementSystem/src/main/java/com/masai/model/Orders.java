@@ -27,7 +27,7 @@ public class Orders {
 	
 	private Integer discount;
 	
-//	@JsonIgnore
+	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Customer customer;
 

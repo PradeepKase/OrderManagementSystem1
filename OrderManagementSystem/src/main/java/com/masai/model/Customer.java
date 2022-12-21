@@ -26,6 +26,10 @@ public class Customer {
 	private String mobile;
 	private String status;
 	
+
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	private List<Orders> orders= new ArrayList<>();
+
 	public String getStatus() {
 		return status;
 	}
@@ -33,12 +37,7 @@ public class Customer {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-//
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-//	@JoinColumn(name = "co_fk", referencedColumnName = "custid")
-	private List<Orders> orders= new ArrayList<>();
 
-	
 	
 	
 	public Integer getCustomerid() {

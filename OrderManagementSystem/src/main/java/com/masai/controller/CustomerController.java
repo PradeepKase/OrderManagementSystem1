@@ -1,8 +1,11 @@
 package com.masai.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,10 +26,6 @@ public class CustomerController {
 	
 		return new ResponseEntity<Customer>(registercustomer, HttpStatus.ACCEPTED);
 	}
-//
-//	private void sendMail() {
-//		// TODO Auto-generated method stub
-//		System.out.println("You have placed 9 orders with us. Buy one more stuff and you will bepromoted to Gold customer and enjoy 10% discounts!");
-//	}
+
 	
 }

@@ -1,5 +1,7 @@
 package com.masai.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,14 +17,10 @@ public class CustomerImpl implements CustomerServices{
 	@Override
 	public Customer addcustomer(Customer customer) {
 	Customer addedcustomer= customerdao.save(customer);
-//	customer.setStatus("regular");
 	return addedcustomer;
 	}
-//
-//	@Override
-//	public Order addorder(Order order) {
-//		Order addedorder=customerdao.findById()
-//	}
+
+
 
 	
 }
